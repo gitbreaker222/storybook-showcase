@@ -1,6 +1,12 @@
 <script>
   import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
   import Button from "./Button.svelte";
+
+  const sizes = {
+    SMALL: 'small',
+    MEDIUM: 'medium',
+    LARGE: 'large',
+  }
 </script>
 
 <Meta
@@ -11,11 +17,13 @@
     primary: { control: "boolean" },
     backgroundColor: { control: "color" },
     size: {
-      control: { type: "select", options: ["small", "medium", "large"] },
+      control: { type: "select", options: [sizes.SMALL, sizes.MEDIUM, sizes.LARGE] },
     },
-    onClick: { action: "onClick" },
+    onClick: { action: "sick licks" },
   }}
 />
+
+<!-- Meta.argTypes => args -->
 
 <Template let:args>
   <Button {...args} on:click={args.onClick} />
@@ -38,7 +46,7 @@
 <Story
   name="Large"
   args={{
-    size: "large",
+    size: sizes.LARGE,
     label: "Button",
   }}
 />
@@ -46,7 +54,7 @@
 <Story
   name="Small"
   args={{
-    size: "small",
+    size: sizes.SMALL,
     label: "Button",
   }}
 />
