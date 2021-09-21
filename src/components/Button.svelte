@@ -7,8 +7,6 @@
 
   export let size = 'medium';
 
-  export let label = '';
-
   const dispatch = createEventDispatcher();
 
   function onClick(event) {
@@ -26,7 +24,7 @@
   class:__custom-bg={!!backgroundColor}
   style="--custom-bg: {backgroundColor};"
   on:click={onClick}>
-  {label}
+  <slot></slot>
 </button>
 
 <style>

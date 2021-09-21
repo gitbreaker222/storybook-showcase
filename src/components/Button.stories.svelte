@@ -22,11 +22,27 @@
     onClick: { action: "sick licks" },
   }}
 />
-
 <!-- Meta.argTypes => args -->
 
+<Story name="Overview" let:args>
+  <div><code>Overview</code></div>
+  <Button></Button>
+  <Button primary>Primary</Button>
+  <Button secondary>Secondary</Button>
+  <Button size="small">Small</Button>
+  <Button size="medium">Medium</Button>
+  <Button size="large">Large</Button>
+  <Button disabled>Disabled</Button>
+  <div><code>Interactive Demo</code></div>
+  <Button {...args} on:click={args.onClick}>
+    {args.label || 'Try me'}
+  </Button>
+</Story>
+
 <Template let:args>
-  <Button {...args} on:click={args.onClick} />
+  <Button {...args} on:click={args.onClick}>
+    {args.label}
+  </Button>
 </Template>
 
 <Story

@@ -12,9 +12,10 @@
 />
 
 <Story name="Overview" let:args>
+  <div><code>Overview</code></div>
   <Component></Component>
-  <Component isModified></Component>
-  <hr/>
+  <Component isModified disabled></Component>
+  <div><code>Interactive Demo</code></div>
   <Component {...args}></Component>
 </Story>
 
