@@ -6,12 +6,6 @@
   export let backgroundColor = '';
 
   export let size = 'medium';
-
-  const dispatch = createEventDispatcher();
-
-  function onClick(event) {
-    dispatch('click', event);
-  }
 </script>
 
 <button
@@ -23,7 +17,7 @@
   class:__large={size === 'large'}
   class:__custom-bg={!!backgroundColor}
   style="--custom-bg: {backgroundColor};"
-  on:click={onClick}
+  on:click
   {...$$restProps}>
   <slot></slot>
 </button>

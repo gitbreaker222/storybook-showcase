@@ -13,13 +13,17 @@
   title="Example/Button"
   component={Button}
   argTypes={{
-    label: { control: "text" },
+    slotContent: { control: "text" },
     primary: { control: "boolean" },
     backgroundColor: { control: "color" },
     size: {
       control: { type: "select", options: [sizes.SMALL, sizes.MEDIUM, sizes.LARGE] },
     },
-    onClick: { action: "sick licks" },
+    click: { action: "click" },
+  }}
+  args={{
+    slotContent: 'Button',
+    primary: false,
   }}
 />
 
@@ -33,14 +37,14 @@
   <Button size="large">Large</Button>
   <Button disabled>Disabled</Button>
   <div><code>Interactive Demo</code></div>
-  <Button {...args} on:click={args.onClick}>
-    {args.label || 'Try me'}
+  <Button {...args} on:click={args.click}>
+    {args.slotContent}
   </Button>
 </Story>
 
 <Template let:args>
-  <Button {...args} on:click={args.onClick}>
-    {args.label || 'Button'}
+  <Button {...args} on:click={args.click}>
+    {args.slotContent}
   </Button>
 </Template>
 
