@@ -23,7 +23,8 @@
   class:__large={size === 'large'}
   class:__custom-bg={!!backgroundColor}
   style="--custom-bg: {backgroundColor};"
-  on:click={onClick}>
+  on:click={onClick}
+  {...$$restProps}>
   <slot></slot>
 </button>
 
@@ -60,5 +61,8 @@
   }
   .storybook-button.__custom-bg {
     background-color: var(--custom-bg);
+  }
+  .storybook-button:disabled {
+    opacity: .5;
   }
 </style>

@@ -22,7 +22,6 @@
     onClick: { action: "sick licks" },
   }}
 />
-<!-- Meta.argTypes => args -->
 
 <Story name="Overview" let:args>
   <div><code>Overview</code></div>
@@ -41,29 +40,23 @@
 
 <Template let:args>
   <Button {...args} on:click={args.onClick}>
-    {args.label}
+    {args.label || 'Button'}
   </Button>
 </Template>
 
-<Story
-  name="Primary"
-  args={{
-    primary: true,
-    label: "Button",
-  }}
-/>
+<Story name="Primary">
+  <Button primary>Button</Button>
+</Story>
 
-<Story
-  name="Secondary"
-  args={{
-    label: "Button",
-  }}
-/>
+<Story name="Secondary">
+  <Button>Button</Button>
+  <Button primary={false}>Button</Button>
+</Story>
+
 <Story
   name="Large"
   args={{
     size: sizes.LARGE,
-    label: "Button",
   }}
 />
 
@@ -71,6 +64,5 @@
   name="Small"
   args={{
     size: sizes.SMALL,
-    label: "Button",
   }}
 />
