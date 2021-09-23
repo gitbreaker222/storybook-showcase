@@ -1,25 +1,28 @@
 <script>
-  import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
-  import Button from "./Button.svelte";
+  import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
+  import Button from './Button.svelte';
 
   const sizes = {
     SMALL: 'small',
     MEDIUM: 'medium',
     LARGE: 'large',
-  }
+  };
 </script>
 
 <Meta
   title="Example/Button"
   component={Button}
   argTypes={{
-    slotContent: { control: "text" },
-    primary: { control: "boolean" },
-    backgroundColor: { control: "color" },
+    slotContent: { control: 'text' },
+    primary: { control: 'boolean' },
+    backgroundColor: { control: 'color' },
     size: {
-      control: { type: "select", options: [sizes.SMALL, sizes.MEDIUM, sizes.LARGE] },
+      control: {
+        type: 'select',
+        options: [sizes.SMALL, sizes.MEDIUM, sizes.LARGE],
+      },
     },
-    click: { action: "click" },
+    click: { action: 'click' },
   }}
   args={{
     slotContent: 'Button',
@@ -29,7 +32,7 @@
 
 <Story name="Overview" let:args>
   <div><code>Overview</code></div>
-  <Button></Button>
+  <Button />
   <Button primary>Primary</Button>
   <Button secondary>Secondary</Button>
   <Button size="small">Small</Button>
