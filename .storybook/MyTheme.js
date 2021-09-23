@@ -5,14 +5,14 @@ export default create({
     // Color
     base: 'dark',
     colorPrimary: 'yellow',
-    colorSecondary: 'hotpink',
+    colorSecondary: 'rebeccapurple',
 
     // UI
     // Text colors
     textColor: 'snow',
     textInverseColor: '#222',
-    appBg: 'rebeccapurple',
-    appContentBg: 'white',
+    appBg: '#1a1c24',
+    appContentBg: '#1f2027',
     appBorderColor: 'silver',
     appBorderRadius: 4,
 
