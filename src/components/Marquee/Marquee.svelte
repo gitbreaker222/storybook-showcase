@@ -1,8 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-
-  let canvasElement;
-
+  
   export let speed = 60; //px per s
   let train;
 

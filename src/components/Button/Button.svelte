@@ -1,6 +1,4 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
-
   export let primary = false;
 
   export let backgroundColor = '';
