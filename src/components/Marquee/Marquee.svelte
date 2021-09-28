@@ -4,20 +4,20 @@
   let canvasElement;
 
   export let speed = 60; //px per s
-  let rail;
+  let train;
 
   onMount(() => {
-    const offsetStart = rail.parentNode.clientWidth;
-    const offsetEnd = rail.scrollWidth;
-    const duration2 = (offsetStart + offsetEnd) / speed;
-    rail.style.setProperty('--offsetStart', `${offsetStart}px`);
-    rail.style.setProperty('--offsetEnd', `${-offsetEnd}px`);
-    rail.style.setProperty('--durationThrough', `${duration2}s`);
+    const offsetStart = train.parentNode.clientWidth;
+    const offsetEnd = train.scrollWidth;
+    const duration = (offsetStart + offsetEnd) / speed;
+    train.style.setProperty('--offsetStart', `${offsetStart}px`);
+    train.style.setProperty('--offsetEnd', `${-offsetEnd}px`);
+    train.style.setProperty('--durationThrough', `${duration}s`);
   });
 </script>
 
-<div class="rail" bind:this={rail}>
-  <div class="train regular"><slot /></div>
+<div class="rail">
+  <div class="train regular" bind:this={train}><slot /></div>
 </div>
 
 <style>

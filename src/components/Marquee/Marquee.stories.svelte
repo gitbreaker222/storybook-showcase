@@ -5,9 +5,13 @@
 
 <Meta
   title="Example/Marquee"
-  {Marquee}
+  component={Marquee}
   argTypes={{
-    isModified: { control: 'boolean' },
+    slot: { control: 'text' },
+    speed: { control: 'number' },
+  }}
+  args={{
+    slot: 'Marquee',
   }}
 />
 
@@ -15,9 +19,13 @@
   <div><code>Overview</code></div>
   <Marquee />
   <Marquee>short text</Marquee>
-  <Marquee>a lalalalala long, a lalalalala long, long long long</Marquee>
+  <Marquee
+    >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum atque
+    explicabo ea fuga vitae placeat blanditiis incidunt eius consequuntur.
+    Accusamus nisi omnis earum, iure non esse soluta et ex ipsam.</Marquee
+  >
   <div><code>Interactive Demo</code></div>
-  <Marquee {...args} />
+  <Marquee {...args}>{args.slot}</Marquee>
 </Story>
 
 <!-- Individual stories -->
@@ -31,6 +39,6 @@
 <Story
   name="Modified"
   args={{
-    isModified: true,
+    speed: 100,
   }}
 />
