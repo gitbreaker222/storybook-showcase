@@ -1,10 +1,11 @@
 <script>
   import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
+  import { routes as r} from "/src/pages/routes";
   import Component from "./Component.svelte";
 </script>
 
 <Meta
-  title="Example/Component"
+  title={`${r.EXAMPLE}/Component`}
   component={Component}
   argTypes={{
     isModified: {control: "boolean"},

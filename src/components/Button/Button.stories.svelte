@@ -1,5 +1,6 @@
 <script>
   import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
+  import { routes as r } from "/src/pages/routes";
   import Button from './Button.svelte';
 
   const sizes = {
@@ -10,7 +11,7 @@
 </script>
 
 <Meta
-  title="Example/Button"
+  title={`${r.EXAMPLE}/Button`}
   component={Button}
   argTypes={{
     slotContent: { control: 'text' },

@@ -1,10 +1,11 @@
 <script>
   import { Meta, Template, Story } from "@storybook/addon-svelte-csf";
+  import {routes as r} from '/src/pages/routes';
   import Page from "./Page.svelte";
 </script>
 
 <Meta
-  title="Example/Page"
+  title={`${r.EXAMPLE}/Page`}
   component={Page}
   argTypes={{
     onLogin: { action: "onLogin" },

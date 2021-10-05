@@ -1,10 +1,11 @@
 <script>
   import { Meta, Template, Story } from '@storybook/addon-svelte-csf';
+  import { routes as r} from "/src/pages/routes";
   import Marquee from './Marquee.svelte';
 </script>
 
 <Meta
-  title="Example/Marquee"
+  title={`${r.EXAMPLE}/Marquee`}
   component={Marquee}
   argTypes={{
     slot: { control: 'text' },
