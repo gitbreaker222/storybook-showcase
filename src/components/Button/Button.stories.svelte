@@ -11,7 +11,7 @@
 </script>
 
 <Meta
-  title={`${r.EXAMPLE}/Button`}
+  title={`${r.STORYBOOK}/Button`}
   component={Button}
   argTypes={{
     slotContent: { control: 'text' },

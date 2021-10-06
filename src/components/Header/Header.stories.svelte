@@ -5,7 +5,7 @@
 </script>
 
 <Meta
-  title={`${r.EXAMPLE}/Header`}
+  title={`${r.STORYBOOK}/Header`}
   component={Header}
   argTypes={{
     onLogin: { action: "onLogin" },
